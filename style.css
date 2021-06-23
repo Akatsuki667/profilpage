@@ -1,0 +1,87 @@
+@font-face {
+ font-family: "Futura";
+ src: url("/fonts/Futura.woff") format("woff");
+}
+
+body {
+  background-image: url("images/test_rorscharh.jpeg");
+  background-size:cover;
+  font-family: 'Futura', sans-serif;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+h1, h3 {
+  color: #4A306D;
+  font-size:48px;
+  margin-block-start: .5em;
+  margin-block-end: .5em;
+}
+
+h2 {
+  color: #4357AD;
+}
+
+
+p {
+  color: #4357AD;
+}
+
+
+
+.container {
+  width: 400px;
+  margin: 0px auto;
+  display:block;
+}
+
+.card_white {
+  background-color: white;
+  padding: 40px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  margin: 20px 0px;
+  text-align: center;
+}
+
+.img-circle {
+  border-radius: 50%;
+  }
+
+  .fab {
+    color: #D138BF;
+    font-size: 32px;
+
+  }
+
+.list-inline > li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.list-inline {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.list-technical {
+  color: #4357AD;
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+
+@media (min-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  body {
+    height:100vh;
+  }
+
+  .container {
+    width: 900px;
+    display:flex;
+    justify-content: space-between;
+  }
+}

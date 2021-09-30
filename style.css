@@ -6,30 +6,12 @@
 body {
   background-image: url("images/test_rorscharh.jpeg");
   background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: 'Futura', sans-serif;
-  display:flex;
   align-items: center;
   justify-content: center;
 }
-
-
-h1, h3 {
-  color: #4A306D;
-  font-size:48px;
-  margin-block-start: .5em;
-  margin-block-end: .5em;
-}
-
-h2 {
-  color: #4357AD;
-}
-
-
-p {
-  color: #4357AD;
-}
-
-
 
 .container {
   width: 400px;
@@ -50,11 +32,10 @@ p {
   border-radius: 50%;
   }
 
-  .fab {
+.fab {
     color: #D138BF;
     font-size: 32px;
-
-  }
+}
 
 .list-inline > li {
   display: inline-block;
@@ -66,22 +47,29 @@ p {
   padding-left: 0px;
 }
 
-.list-technical {
+h1, h3 {
+  text-align: center;
+  color: #4A306D;
+  font-size:48px;
+  margin-block-start: .5em;
+  margin-block-end: .5em;
+}
+
+h2 {
   color: #4357AD;
-  list-style-type: none;
-  padding-left: 0px;
 }
 
 
-@media (min-width: 960px) {
-  /* For a screen < 960px, this CSS will be read */
-  body {
-    height:100vh;
-  }
+p {
+  color: #4357AD;
+}
 
-  .container {
-    width: 900px;
-    display:flex;
-    justify-content: space-between;
-  }
+.compétence {
+  list-style: none;
+  text-align: left;
+  color: #4357AD;
+}
+
+#compétence {
+  font-size: 42px;
 }

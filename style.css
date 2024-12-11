@@ -29,8 +29,12 @@ body {
 }
 
 .img-circle {
-  border-radius: 50%;
-  }
+  width: 200px; /* Largeur de l'image */
+  height: 200px; /* Hauteur de l'image, égale à la largeur */
+  border-radius: 50%; /* Transforme l'image en cercle */
+  object-fit: cover; /* Coupe l'image pour remplir le cercle */
+  border: 2px solid #ccc; /* Bordure optionnelle */
+}
 
 .fab {
     color: #D138BF;

@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: "Lacquer", system-ui;;
     background-image: url(images/atelier.webp);
@@ -25,7 +24,6 @@ footer {
     position: sticky;
     bottom: 0;
 }
-
 
 img {
     width: 50px;
@@ -71,15 +69,6 @@ a {
 
 .back-profil {
     background-image: url(images/profil.avif);
-    background-size: cover;
-    transform: rotateY(180deg);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    color: white;
-    position: relative;
 }
 
 
@@ -103,15 +92,6 @@ a {
 
 .back-skills {
     background-image: url(images/skills.jpeg);
-    background-size: cover;
-    transform: rotateY(180deg);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    color: white;
-    position: relative;
 }
 
 /* Tableau Formations */
@@ -134,15 +114,6 @@ a {
 
 .back-formation {
     background-image: url(images/formation.jpeg);
-    background-size: cover;
-    transform: rotateY(180deg);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    color: white;
-    position: relative;
 }
 
 
@@ -166,6 +137,9 @@ a {
 
 .back-information {
     background-image: url(images/contact.jpeg);
+}
+
+.back-profil, .back-skills, .back-formation, .back-information {
     background-size: cover;
     transform: rotateY(180deg);
     text-align: center;
@@ -177,7 +151,7 @@ a {
     position: relative;
 }
 
-
+/* Création Overlay */
 .back-profil::before, 
 .back-skills::before, 
 .back-formation::before, 
@@ -192,6 +166,7 @@ a {
     z-index: 1;
 }
 
+/* Placement du contenu */
 .back-profil > *, 
 .back-skills > *, 
 .back-formation > *, 
@@ -199,4 +174,75 @@ a {
     position: relative;
     z-index: 2;
     padding: 0 20px;
+}
+
+/* MEDIA QUERIES POUR RESPONSIVE */
+
+/* Tablettes (768px et moins) */
+@media screen and (max-width: 768px) {
+    body {
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    main {
+        gap: 30px;
+    }
+    
+    .profil, .skills, .formation, .information {
+        max-width: 350px;
+        height: 350px;
+    }
+    
+    .back-profil > *, 
+    .back-skills > *, 
+    .back-formation > *, 
+    .back-information > * {
+        padding: 0 15px;
+        font-size: 0.9em;
+    }
+    
+    .back-profil, .back-skills, .back-formation, .back-information {
+        gap: 15px;
+    }
+}
+
+/* Mobiles (480px et moins) */
+@media screen and (max-width: 480px) {
+    body {
+        gap: 10px;
+        padding: 10px;
+        background-attachment: scroll; /* Meilleure performance sur mobile */
+    }
+
+    main {
+        gap: 20px;
+    }
+
+    .profil, .skills, .formation, .information {
+        max-width: 300px;
+        height: 300px;
+    }
+
+    .back-profil > *, 
+    .back-skills > *, 
+    .back-formation > *, 
+    .back-information > * {
+        padding: 0 10px;
+        font-size: 0.8em;
+    }
+
+    .back-profil, .back-skills, .back-formation, .back-information {
+        gap: 10px;
+    }
+    img {
+        width: 40px;
+        height: 40px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    h3 {
+        font-size: 1.2em;
+    }
 }

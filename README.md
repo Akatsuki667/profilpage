@@ -1,21 +1,31 @@
-# Hello World!
+# Portfolio Website - Alexandre Teyant
+A responsive personal portfolio website featuring interactive flip cards showcasing professional profile, skills, education, and contact information.
 
-This project is simple, transfrom a curiculum vitae classic on a project of code.
+## Technologies Used
+- **HTML5**: Semantic markup structure
+- **CSS3**: Advanced styling with 3D transforms and animations
+- **Google Fonts**: Lacquer font family for enhanced typography
 
-## Content profilpage
 
-### Index.html 
-DOCTYPE html 5 for the markup. Then my code with a small presentation, my informations, my profil picture and some links for my social networks.
+## File Structure
+```
+portfolio/
+├── index.html          # Main HTML file
+├── style.css           # CSS stylesheet
+└── images/             # Image assets directory
+    ├── atelier.webp    # Background image
+    ├── profil.avif     # Profile section image
+    ├── skills.jpeg     # Skills section image
+    ├── formation.jpeg  # Education section image
+    ├── contact.jpeg    # Contact section image
+    ├── Github.png      # GitHub icon
+    └── Linkedin.png    # LinkedIn icon
+```
 
-### Style.css
-Some code for personalize this html.
+## License
+© 2025 Teyant Alexandre. All rights reserved.
 
-### Images
-A folder with my profil picture and my background theme.
-
-### Fonts
-A folder for my fonts.
-
-Thanks for your read ;)
-
-Bisous les vilains!
+## Connect
+- **GitHub**: [Akatsuki667](https://github.com/Akatsuki667)
+- **LinkedIn**: [Alexandre Teyant](https://www.linkedin.com/in/alexandre-teyant-4153b8213/)
+- **Email**: qextzy@gmail.com

@@ -1,17 +1,28 @@
+/* Base CSS */
 body {
-    font-family: "Lacquer", system-ui;;
-    background-image: url(images/atelier.webp);
+    font-family: "Lacquer", system-ui;
+    background-image: url(./Images/atelier.webp);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Permet au header d'être au dessus des tableaux */
 }
 
 main {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {
@@ -19,26 +30,21 @@ footer {
     bottom: 0;
 }
 
-img {
-    width: 50px;
-    height: 50px;
-}
-
-a {
-    color: white;
+h1, a {
+    color: black;
 }
 
 /* Tableau Profil */
-.profil, .skills, .formation, .information{
-    width:400px;
-    height:400px;
+.profil {
+    width: 400px;
+    height: 400px;
 }
-.profil:hover  .card-profil{
+
+.profil:hover .card-profil {
     transform: rotateY(180deg);
 }
 
-.card-profil, .card-skills,
-.card-formation, .card-information {
+.card-profil {
     width: 100%;
     height: 100%;
     position: relative;
@@ -46,7 +52,6 @@ a {
     transform-style: preserve-3d;
     cursor: pointer;
 }
-
 
 .front-profil, .back-profil {
     width: 100%;
@@ -57,21 +62,52 @@ a {
 }
 
 .front-profil {
-    background-image: url(images/profil.avif);
+    background-image: url(./Images/profil.avif);
     background-size: cover;
 }
 
 .back-profil {
-    background-image: url(images/profil.avif);
+    background-size: cover;
+    background-image: url(./Images/profil.avif);
+    transform: rotateY(180deg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    position: relative;
 }
-
 
 /* Tableau Compétences */
-.skills:hover  .card-skills{
+.skills {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;/* Active le scroll horizontal */
+    overflow-y: hidden;/* Pas de scroll vertical */
+    scroll-snap-type: x mandatory;/* Snap sur les cartes */
+    scrollbar-width: none;/* Cache scrollbar Firefox */
+    -ms-overflow-style: none;/* Cache scrollbar IE/Edge */
+    max-width: 90vw;
+    width: 100%;
+}
+
+.card-skills:hover {
     transform: rotateY(180deg);
 }
 
-.front-skills, .back-skills {
+.card-skills {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0; /* Empêche les carte de rétrécir */
+    scroll-snap-align: center; /* Cntrage carte lors du scroll*/
+    position: relative;
+    transition: transform 1000ms;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+/* Java */
+.front-java, .back-java {
     width: 100%;
     height:100%;
     position: absolute;
@@ -79,21 +115,26 @@ a {
     overflow: hidden;
 }
 
-.front-skills {
-    background-image: url(images/skills.jpeg);
+.front-java {
+    background-image: url(./Images/formation.jpeg);
     background-size: cover;
 }
 
-.back-skills {
-    background-image: url(images/skills.jpeg);
-}
-
-/* Tableau Formations */
-.formation:hover  .card-formation{
+.back-java {
+    background-size: cover;
+    background-position: center;
+    background-image: url(./Images/java-logo.png);
     transform: rotateY(180deg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    position: relative;
 }
-
-.front-formation, .back-formation {
+/* Spring */
+.front-spring, .back-spring {
     width: 100%;
     height:100%;
     position: absolute;
@@ -101,22 +142,26 @@ a {
     overflow: hidden;
 }
 
-.front-formation {
-    background-image: url(images/formation.jpeg);
+.front-spring {
+    background-image: url(./Images/skills.jpeg);
     background-size: cover;
 }
 
-.back-formation {
-    background-image: url(images/formation.jpeg);
-}
-
-
-/* Tableau Informations */
-.information:hover  .card-information{
+.back-spring {
+    background-size: cover;
+    background-position: center;
+    background-image: url(./Images/Spring.png);
     transform: rotateY(180deg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    position: relative;
 }
-
-.front-information, .back-information {
+/* JavaScript */
+.front-js, .back-js {
     width: 100%;
     height:100%;
     position: absolute;
@@ -124,17 +169,113 @@ a {
     overflow: hidden;
 }
 
-.front-information {
-    background-image: url(images/contact.jpeg);
+.front-js {
+    background-image: url(./Images/formation.jpeg);
     background-size: cover;
 }
 
-.back-information {
-    background-image: url(images/contact.jpeg);
+.back-js {
+    background-size: cover;
+    background-position: center;
+    background-image: url(./Images/js.png);
+    transform: rotateY(180deg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    position: relative;
+}
+/* HTML */
+.front-html, .back-html {
+    width: 100%;
+    height:100%;
+    position: absolute;
+    backface-visibility: hidden;
+    overflow: hidden;
 }
 
-.back-profil, .back-skills, .back-formation, .back-information {
+.front-html {
+    background-image: url(./Images/skills.jpeg)
+}
+
+.back-html {
     background-size: cover;
+    background-position: center;
+    background-image: url(./Images/html.jpg);
+    transform: rotateY(180deg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    position: relative;
+}
+/* CSS */
+.front-css, .back-css {
+    width: 100%;
+    height:100%;
+    position: absolute;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.front-css {
+    background-image: url(./Images/formation.jpeg);
+    background-size: cover;
+}
+
+.back-css {
+    background-size: cover;
+    background-position: center;
+    background-image: url(./Images/css.webp);
+    transform: rotateY(180deg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    position: relative;
+}
+
+/* Tableau Contatc */
+.contact {
+    width: 400px;
+    height: 400px;
+}
+
+.contact:hover .card-contact {
+    transform: rotateY(180deg);
+}
+
+.card-contact {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1000ms;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.front-contact, .back-contact {
+    width: 100%;
+    height:100%;
+    position: absolute;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.front-contact {
+    background-image: url(./Images/contact.jpeg);
+    background-size: cover;
+}
+
+.back-contact {
+    background-size: cover;
+    background-image: url(./Images/contact.jpeg);
     transform: rotateY(180deg);
     text-align: center;
     display: flex;
@@ -146,10 +287,8 @@ a {
 }
 
 /* Création Overlay */
-.back-profil::before, 
-.back-skills::before, 
-.back-formation::before, 
-.back-information::before {
+.back-profil::before,
+.back-contact::before {
     content: '';
     position: absolute;
     top: 0;
@@ -161,82 +300,36 @@ a {
 }
 
 /* Placement du contenu */
-.back-profil > *, 
-.back-skills > *, 
-.back-formation > *, 
-.back-information > * {
+.back-profil > *,
+.back-contact > * {
     position: relative;
     z-index: 2;
     padding: 0 20px;
 }
 
-/* MEDIA QUERIES POUR RESPONSIVE */
-
-/* Tablettes (768px et moins) */
-@media screen and (max-width: 768px) {
-    body {
-        gap: 15px;
-        padding: 15px;
-    }
-    
-    main {
-        gap: 30px;
-    }
-    
-    .profil, .skills, .formation, .information {
-        max-width: 350px;
-        height: 350px;
-    }
-    
-    .back-profil > *, 
-    .back-skills > *, 
-    .back-formation > *, 
-    .back-information > * {
-        padding: 0 15px;
-        font-size: 0.9em;
-    }
-    
-    .back-profil, .back-skills, .back-formation, .back-information {
-        gap: 15px;
-    }
-}
-
-/* Mobiles (480px et moins) */
-@media screen and (max-width: 480px) {
-    body {
-        gap: 10px;
-        padding: 10px;
-        background-attachment: scroll; /* Meilleure performance sur mobile */
+/* Responsive */
+@media (max-width: 1024px) {
+    .profil:hover .card-profil {
+        transform: none;
     }
 
-    main {
-        gap: 20px;
+    .card-profil.flipped {
+        transform: rotateY(180deg);
     }
 
-    .profil, .skills, .formation, .information {
-        max-width: 300px;
-        height: 300px;
+    .card-skills:hover {
+        transform: none;
     }
 
-    .back-profil > *, 
-    .back-skills > *, 
-    .back-formation > *, 
-    .back-information > * {
-        padding: 0 10px;
-        font-size: 0.8em;
+    .card-skills.flipped {
+        transform: rotateY(180deg);
     }
 
-    .back-profil, .back-skills, .back-formation, .back-information {
-        gap: 10px;
+        .card-skills:hover {
+        transform: none;
     }
-    img {
-        width: 40px;
-        height: 40px;
-    }
-    h1 {
-        font-size: 1.5em;
-    }
-    h3 {
-        font-size: 1.2em;
+
+    .card-contact.flipped {
+        transform: rotateY(180deg);
     }
 }

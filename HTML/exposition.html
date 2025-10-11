@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
-    <head>
+<html>
+    <head lang="fr">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../style.css">
         <!-- Font Google -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +14,16 @@
     <body>
         <header>
             <h1>Exposition</h1>
+            <h1><a href="fishon.html">FishOn</a><h1>
         </header>
 
         <main>
             <!-- Profil -->
-            <div class="profil">
-                <div class="card-profil">
+             <div class="profil">
+                <div class="card-profil" id="card">
                     <div class="front-profil"></div>
                     <div class="back-profil">
-                        <h1>Profil</h1>
+                        <h2>Profil</h2>
                         <p>
                             Ancien <strong>barman</strong>, l'année 2024-2025 fut une reconversion professionnelle à travers l'école <strong>Holberton</strong>.
                         </p>
@@ -35,49 +36,41 @@
                         </p>
                     </div>
                 </div>
-            </div>
+             </div>
 
             <!-- Compétences -->
             <div class="skills">
-                <div class="card-skills">
-                    <div class="front-skills"></div>
-                    <div class="back-skills">
-                        <h1>Compétences</h1>
-                        <li>Linux</li>
-                        <li>Bash</li>
-                        <li>C</li>
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>Spring</li>
-                        <li>Javascript</li>
-                        <li>HTML5, CSS3</li>
-                        <li>Git, Github</li>
-                    </div>
+                <!-- Java -->
+                <div class="card-skills" id="card">
+                    <div class="front-java"></div>
+                    <div class="back-java"></div>
+                </div>
+                <!-- Spring Boot -->
+                <div class="card-skills" id="card">
+                    <div class="front-spring"></div>
+                    <div class="back-spring"></div>
+                </div>
+                <!-- JavaScript -->
+                <div class="card-skills" id="card">
+                    <div class="front-js"></div>
+                    <div class="back-js"></div>
+                </div>
+                <!-- HTML -->
+                <div class="card-skills" id="card">
+                    <div class="front-html"></div>
+                    <div class="back-html"></div>
+                </div>
+                <!-- CSS -->
+                <div class="card-skills" id="card">
+                    <div class="front-css"></div>
+                    <div class="back-css"></div>
                 </div>
             </div>
-
-            <!-- Formations -->
-            <div class="formation">
-                <div class="card-formation">
-                    <div class="front-formation"></div>
-                    <div class="back-formation">
-                        <h3>Formations</h3>
-                        <p>
-                            Master Of Science Epitech / 2025 - 2028
-                        </p>
-                        <p>
-                            Je prépare actuellement ce titre professionel :<a href="https://www.francecompetences.fr/recherche/rncp/37674/" target="_blank"> NIV 5 - Développeur web & web mobile (367674)</a>.
-                        </p>
-                        <p>Alumni Holberton School / 2024 - 2025</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Informations -->
-            <div class="information">
-                <div class="card-information">
-                    <div class="front-information"></div>
-                    <div class="back-information">
+            <!-- Contact -->
+             <div class="contact">
+                <div class="card-contact" id="card">
+                    <div class="front-contact"></div>
+                    <div class="back-contact">
                         <h3>Informations</h3>
                         <p>28 ans / 26.04.97</p>
                         <p>qextzy@gmail.com</p>
@@ -85,21 +78,23 @@
 
                         <li>
                             <a href="https://github.com/Akatsuki667" target="_blank">
-                                <img src="images/Github.png">
+                                <img src="../Images/Github.png">
                             </a>
                         </li>
                         <li>
                             <a href="https://www.linkedin.com/in/alexandre-teyant-4153b8213/" target="_blank">
-                                <img src="images/Linkedin.png">
+                                <img src="../Images/Linkedin.png">
                             </a>
                         </li>
                     </div>
                 </div>
-            </div>
+             </div>
         </main>
-
+        
         <footer>
             <h1>&copy; 2025 Teyant Alexandre</h1>
         </footer>
+
+        <script src="../script.js"></script>
     </body>
 </html>

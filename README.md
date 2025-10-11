@@ -18,9 +18,8 @@ Site vitrine interractif avec __flip card__ présentant mon __profil__, mes __co
 ```
 profilpage/
 │
-├── HTML/
-│   ├── exposition.html  # Page principale du portfolio
-│   └── fishon.html      # Page projet (en développement)
+├── index.html  # Page principale du portfolio
+└── fishon.html      # Page projet (en développement)
 │
 ├── Images/
 │   ├── atelier.webp     # Background principal

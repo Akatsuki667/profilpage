@@ -5,7 +5,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -308,28 +308,42 @@ h1, a {
 }
 
 /* Responsive */
+@media (min-width: 1025px) {
+    body {
+        background-attachment: fixed;
+    }
+}
+
 @media (max-width: 1024px) {
-    .profil:hover .card-profil {
+    /* Désactiver le hover, activer le tap */
+    .profil:hover .card-profil,
+    .card-skills:hover,
+    .contact:hover .card-contact {
         transform: none;
     }
 
-    .card-profil.flipped {
-        transform: rotateY(180deg);
-    }
-
-    .card-skills:hover {
-        transform: none;
-    }
-
-    .card-skills.flipped {
-        transform: rotateY(180deg);
-    }
-
-        .card-skills:hover {
-        transform: none;
-    }
-
+    /* Classe pour retournement au clic */
+    .card-profil.flipped,
+    .card-skills.flipped,
     .card-contact.flipped {
         transform: rotateY(180deg);
+    }
+}
+
+@media (max-width: 428px) {
+
+    .profil, .contact {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .card-skills {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .back-profil, .back-contact {
+        gap: 15px;
+        font-size: 14px;
     }
 }

@@ -34,6 +34,13 @@ h1, a {
     color: black;
 }
 
+.front-profil label {
+    display: none;
+}
+.skills label {
+    display: none;
+}
+
 /* Tableau Profil */
 .profil {
     width: 400px;
@@ -328,6 +335,10 @@ h1, a {
     .card-contact.flipped {
         transform: rotateY(180deg);
     }
+
+    .front-profil label {
+        display: block;
+    }
 }
 
 @media (max-width: 428px) {
@@ -345,5 +356,9 @@ h1, a {
     .back-profil, .back-contact {
         gap: 15px;
         font-size: 14px;
+    }
+
+    .skills label {
+        display: block;
     }
 }

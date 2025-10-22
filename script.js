@@ -5,8 +5,9 @@ function isMobile() {
 }
 
 cards.forEach(card => {
-    card.addEventListener('click', function () {
+    card.addEventListener('touchend', function (e) {
         if (isMobile()) {
+            e.preventDefault();
             this.classList.toggle('flipped');
         }
     });

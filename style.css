@@ -326,7 +326,7 @@ h1, a {
     .profil:hover .card-profil,
     .card-skills:hover,
     .contact:hover .card-contact {
-        transform: none;
+        transform: rotateY(0deg);
     }
 
     /* Classe pour retournement au clic */

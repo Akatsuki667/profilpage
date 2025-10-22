@@ -1,4 +1,4 @@
-const cards = document.querySelectorAll('#card');
+const cards = document.querySelectorAll('.card-profil, .card-skills, .card-contact');
 
 function isMobile() {
     return window.innerWidth <= 1024;

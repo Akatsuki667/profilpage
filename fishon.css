@@ -1,0 +1,133 @@
+/* Base CSS */
+body {
+    font-family: "Lacquer", system-ui;
+    background-image: url(../Images/atelier.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Permet au header d'être au dessus des tableaux */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+}
+
+h1, a {
+    color: black;
+}
+
+/* Tableau Fishon */
+.fishon {
+    width: 700px;
+    height: 550px;
+    
+}
+
+.fishon:hover .card-fishon {
+    transform: rotateY(180deg);
+}
+
+.card-fishon {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1000ms;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.front-fishon, .back-fishon {
+    width: 100%;
+    height:100%;
+    position: absolute;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background-position: center;
+}
+
+.front-fishon {
+    background-image: url(../Images/fishon.webp);
+    background-size: cover;
+}
+
+.back-fishon {
+    background-size: cover;
+    background-image: url(../Images/fishon.webp);
+    transform: rotateY(180deg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+/* Création Overlay */
+.back-fishon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Placement du contenu */
+.back-fishon > *{
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .fishon:hover .card-fishon {
+        transform: none;
+    }
+
+    .card-fishon.flipped {
+        transform: rotateY(180deg);
+    }
+}
+
+@media (max-width: 428px) {
+
+    .fishon {
+        width: 90%;
+        min-height: 600px;
+    }
+
+    .back-fishon {
+        padding-top: 20px;
+        justify-content: flex-start; /* S'assure que le contenu commence en haut */
+        font-size: 15px;
+    }
+
+    .back-fishon > * {
+        padding: 0 15px;
+    }
+    
+    .back-fishon li, .back-fishon p {
+        font-size: 0.95em;
+    }
+}

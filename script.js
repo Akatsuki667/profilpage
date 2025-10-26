@@ -1,13 +1,12 @@
-const cards = document.querySelectorAll('.card-profil, .card-skills, .card-contact');
+const cards = document.querySelectorAll('.card-profil, .card-skills, .card-contact, .card-fishon');
 
 function isMobile() {
     return window.innerWidth <= 1024;
 }
 
 cards.forEach(card => {
-    card.addEventListener('touchend', function (e) {
+    card.addEventListener('click', function () {
         if (isMobile()) {
-            e.preventDefault();
             this.classList.toggle('flipped');
         }
     });

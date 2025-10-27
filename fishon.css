@@ -1,7 +1,7 @@
 /* Base CSS */
 body {
     font-family: "Lacquer", system-ui;
-    background-image: url(../Images/atelier.webp);
+    background-image: url(./Images/atelier.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -64,13 +64,13 @@ h1, a {
 }
 
 .front-fishon {
-    background-image: url(../Images/fishon.webp);
+    background-image: url(./Images/fishon.webp);
     background-size: cover;
 }
 
 .back-fishon {
     background-size: cover;
-    background-image: url(../Images/fishon.webp);
+    background-image: url(./Images/fishon.webp);
     transform: rotateY(180deg);
     text-align: center;
     display: flex;
